@@ -1,3 +1,4 @@
+import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 
@@ -25,5 +26,8 @@ public class Driver {
         System.out.println(Arrays.toString(m.exponents));
 
         m.saveToFile("abc.txt");
+        Polynomial q = new Polynomial(new File("abc.txt"));
+        System.out.println(Arrays.toString(q.coefficients));
+        System.out.println(Arrays.toString(q.exponents));
     }
 }
